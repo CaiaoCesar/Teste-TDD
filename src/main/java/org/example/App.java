@@ -1,5 +1,8 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -15,9 +18,26 @@ public class App
              String digito= leitor.next();
              System.out.println(digito);
         }
+
+        App.leituraArquivo( "src/main/java/org/example/Arquivo_Nucletideos_txt");
+
+        App.calculaNucleotideos();
     }
 
-    public void calculaNucleotideos(String arquivo){
+    public static void leituraArquivo(String path) {
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String line = br.readLine();
+            while (line != null) {
+                System.out.println(line);
+                line = br.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+   public static void calculaNucleotideos(){
         return arrayInteiros;
     }
-}
+
+

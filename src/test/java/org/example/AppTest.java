@@ -1,5 +1,6 @@
 package org.example;
 
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author CaioCesar
  **/
+
+
 class AppTest {
     //Com lambda
     @Test
@@ -21,3 +24,4 @@ class AppTest {
         );
     }
 }
+
