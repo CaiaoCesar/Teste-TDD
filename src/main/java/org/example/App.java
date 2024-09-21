@@ -37,6 +37,8 @@ public class App {
 
     public static void calculaNucleotideos(String caminhoArquivo){
         leituraArquivo(caminhoArquivo);
+
+        return arrayInteiros();
     }
 }
 
