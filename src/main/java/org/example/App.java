@@ -12,9 +12,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         try (Scanner leitor = new Scanner(System.in)) {
-            System.out.println("Qual o valor: ");
-            String digito = leitor.next();
-            System.out.println(digito);
+            System.out.println("Calculo de Nucletideos: ");
         }
 
         String caminhoArquivo = "src/main/java/org/example/Arquivo_Nucletideos_txt";
@@ -37,6 +35,9 @@ public class App {
 
     public static void calculaNucleotideos(String caminhoArquivo){
         leituraArquivo(caminhoArquivo);
+        String letras = "A, C, F, G, T";
+
+        }
 
         return arrayInteiros();
     }
