@@ -3,6 +3,7 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 
 public class App {
     public static void main(String[] args) {
@@ -24,6 +25,8 @@ public class App {
             }
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
+        } catch (InputMismatchException ime) {
+            System.out.println("Entrada inválida: " + ime.getMessage());
         }
         return conteudo.toString(); // Retorna o conteúdo completo do arquivo como string
     }
