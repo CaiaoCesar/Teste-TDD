@@ -3,13 +3,10 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        try (Scanner leitor = new Scanner(System.in)) {
-            System.out.println("Calculo de Nucletideos:\n");
-        }
+        System.out.println("Calculo de Nucletideos:\n");
 
         String caminhoArquivo = "src/main/java/org/example/Arquivo_Nucletideos_txt";
         calculaNucleotideos(caminhoArquivo);
