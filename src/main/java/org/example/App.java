@@ -17,13 +17,14 @@ public class App {
             System.out.println(digito);
         }
 
-        App.leituraArquivo("src/main/java/org/example/Arquivo_Nucletideos_txt");
+        String caminhoArquivo = "src/main/java/org/example/Arquivo_Nucletideos_txt";
+        calculaNucleotideos(caminhoArquivo);
 
         //App.calculaNucleotideos();
     }
 
-    public static void leituraArquivo(String path) {
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    public static void leituraArquivo(String caminhoArquivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo))) {
             String line = br.readLine();
             while (line != null) {
                 System.out.println(line);
@@ -34,12 +35,13 @@ public class App {
         }
     }
 
+    public static void calculaNucleotideos(String caminhoArquivo){
+        leituraArquivo(caminhoArquivo);
+    }
 }
 
-  /* public static void calculaNucleotideos(){
-        return arrayInteiro;
-    }
-    */
+
+
 
 
 
